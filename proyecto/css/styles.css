@@ -6,10 +6,11 @@ html{
   margin: 0 auto;
 }
 .hero{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 400px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-block-end: 50px;
 }
 .hero__text{
   align-self: center;
@@ -36,7 +37,41 @@ html{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .hero__image img{
+  height: 100%;
   object-fit: contain;
   width: 100%;
+}
+/*    Services */
+.services h2{
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.services__content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 25px;
+}
+.services__one{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-template-areas: 
+  "img img"
+  "img img";
+}
+.services__one img:nth-child(1){
+  grid-area: img;
+}
+.services__two{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 15px;
+}
+.services img{
   height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
